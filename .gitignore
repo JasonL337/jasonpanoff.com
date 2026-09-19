@@ -1,0 +1,31 @@
+# ---- Unity WebGL builds --------------------------------------------------
+# Build output is a derived artifact, uploaded to S3 by scripts/deploy-game.
+# Keeping it out of git stops 40MB binaries from living in history forever.
+games/*/
+!games/README.md
+
+# ---- Unity project internals (if a project ever sits near this repo) -----
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+UserSettings/
+*.csproj
+*.sln
+
+# ---- Secrets -------------------------------------------------------------
+.env
+.env.*
+*.pem
+aws-credentials*
+
+# ---- OS / editor ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---- Node (only if tooling is added later) -------------------------------
+node_modules/
