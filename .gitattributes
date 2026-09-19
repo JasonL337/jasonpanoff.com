@@ -1,0 +1,18 @@
+# Normalize text to LF in the repo; git checks out CRLF on Windows as needed.
+* text=auto eol=lf
+
+# Never touch binaries.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.mp4 binary
+*.wasm binary
+*.br binary
+*.gz binary
+*.data binary
+*.unityweb binary
