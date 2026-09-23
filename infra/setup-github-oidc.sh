@@ -40,6 +40,11 @@ fi
 # 2. Role and trust policy ---------------------------------------------------
 # The "sub" condition is the security boundary. Without it, ANY GitHub repo
 # in the world could assume this role.
+#
+# IgnoreCase because the owner/repo casing in GitHub's token is not something
+# we control, and a case mismatch fails with the same opaque "Not authorized"
+# error as a genuine impersonation attempt. The value is still pinned to this
+# repo and this branch.
 TRUST=$(cat <<JSON
 {
   "Version": "2012-10-17",
@@ -49,7 +54,9 @@ TRUST=$(cat <<JSON
     "Action": "sts:AssumeRoleWithWebIdentity",
     "Condition": {
       "StringEquals": {
-        "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+        "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+      },
+      "StringEqualsIgnoreCase": {
         "token.actions.githubusercontent.com:sub": "repo:${GITHUB_REPO}:ref:refs/heads/${BRANCH}"
       }
     }
