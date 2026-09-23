@@ -1,0 +1,33 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only one deploy at a time; a queued run should not race an in-flight sync.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  # Required for OIDC: lets the job request a signed identity token from
+  # GitHub. Without this the role assumption fails with a confusing
+  # "Not authorized to perform sts:AssumeRoleWithWebIdentity".
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assume AWS deploy role
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Deploy site and invalidate cache
+        run: bash scripts/deploy.sh
