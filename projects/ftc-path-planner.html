@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTC Path Planner — Jason Panoff</title>
+  <meta name="description" content="A Unity path-creation app and path-following algorithm for an FTC competition robot.">
+  <link rel="canonical" href="https://jasonpanoff.com/projects/ftc-path-planner.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Jason Panoff</a>
+    <nav>
+      <a href="/projects/">Projects</a>
+      <a href="/games/">Games</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <section class="hero">
+      <p class="when">10th grade &middot; FIRST Tech Challenge, Team 6209</p>
+      <h1>FTC Path Planner</h1>
+      <p class="tagline">
+        A virtual simulation and path-creation application for our FTC robot,
+        built in Unity, along with the path-following algorithm the robot runs.
+      </p>
+    </section>
+
+    <div class="split">
+      <figure>
+        <!-- TODO: replace with /assets/img/ftc-app.jpg -->
+        <img src="/assets/img/placeholder.svg" alt="The path planner application, showing a drawn path on a virtual field">
+        <figcaption>The planner: draw a path on a virtual field.</figcaption>
+      </figure>
+      <figure>
+        <!-- TODO: replace with /assets/img/ftc-robot.jpg -->
+        <img src="/assets/img/placeholder.svg" alt="Our FTC competition robot on the field">
+        <figcaption>The robot running it on the real field.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+      Creating and modifying autonomous paths used to mean editing coordinates
+      by hand. This app made it visual: draw a path, save it, push it to the
+      robot, and watch it run. New paths took seconds instead of a session, and
+      revising an old one stopped being something we avoided.
+    </p>
+
+    <h2>Demo</h2>
+
+    <!-- TODO: replace TODO_FTC_VIDEO_ID with the YouTube id, e.g. dQw4w9WgXcQ -->
+    <div class="video" data-youtube="TODO_FTC_VIDEO_ID" data-title="FTC Path Planner demo"></div>
+    <p class="video-note">
+      <!-- TODO: same id here -->
+      Or <a href="https://www.youtube.com/watch?v=TODO_FTC_VIDEO_ID">watch on YouTube</a>.
+    </p>
+
+    <p>
+      In this video I draw a path, save it, push it to the robot&rsquo;s memory,
+      and run the self-contained path-following algorithm. The algorithm
+      corrects the robot back onto the path even after it is nudged or pulled
+      off course &mdash; as I do to it here.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      <!-- TODO: the engineering detail. Path representation, how the follower
+           computes corrections, what you tried that did not work. This is the
+           section an engineer actually reads. -->
+      TODO
+    </p>
+    <a class="back" href="/projects/">&larr; All projects</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Jason Panoff</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

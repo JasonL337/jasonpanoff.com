@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jason Panoff</title>
-  <meta name="description" content="Engineering projects by Jason Panoff.">
+  <meta name="description" content="Engineering projects by Jason Panoff — robotics, Unity, computer vision, and machine learning.">
   <link rel="canonical" href="https://jasonpanoff.com/">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -20,34 +20,105 @@
   <main>
     <section class="hero">
       <h1>Jason Panoff</h1>
-      <!-- TODO: one or two sentences. What you build, what you are looking for. -->
-      <p class="tagline">Engineer building &lt;things&gt;. Currently &lt;studying / working on&gt;.</p>
+      <!-- TODO: make this yours. Two sentences, plain language. -->
+      <p class="tagline">
+        Electrical and Computer Engineering at UT Austin, software track.
+        I build robotics software, game systems in Unity, and things that
+        need computer vision to work.
+      </p>
+      <p class="when">Last updated Fall 2026</p>
+      <div class="links">
+        <a href="mailto:jampanoff@gmail.com">Email</a>
+        <a href="https://github.com/JasonL337">GitHub</a>
+        <a href="https://linkedin.com/in/jason-panoff">LinkedIn</a>
+        <!-- TODO: drop the PDF at assets/Jason_Panoff_Resume.pdf -->
+        <a href="/assets/Jason_Panoff_Resume.pdf">Résumé</a>
+      </div>
     </section>
 
     <section>
-      <h2>Selected work</h2>
+      <h2>Projects</h2>
 
-      <!-- TODO: one <li class="card"> per project. Delete the spares. -->
       <ul class="grid">
         <li class="card">
+          <!-- TODO: replace with /assets/img/ftc-app.jpg -->
           <img src="/assets/img/placeholder.svg" alt="">
           <div class="card-body">
-            <h3><a href="/projects/project-one.html">Project One</a></h3>
-            <p>One line on what it does and why it was interesting to build.</p>
+            <h3><a href="/projects/ftc-path-planner.html">FTC Path Planner</a></h3>
+            <p class="when">10th grade</p>
+            <p>
+              A Unity simulation and path-creation app for our FTC robot, plus
+              the path-following algorithm it runs. Building and editing paths
+              went from slow and fiddly to fast and visual.
+            </p>
             <div class="tags">
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
+              <span class="tag">Java</span>
+              <span class="tag">Robotics</span>
             </div>
           </div>
         </li>
 
         <li class="card">
+          <!-- TODO: replace with /assets/img/aruco.jpg -->
           <img src="/assets/img/placeholder.svg" alt="">
           <div class="card-body">
-            <h3><a href="/projects/project-two.html">Project Two</a></h3>
-            <p>One line on what it does and why it was interesting to build.</p>
+            <h3><a href="/projects/aruco-localization.html">ArUco Robot Localization</a></h3>
+            <p class="when">UT RoboMaster</p>
+            <p>
+              A camera-based localization system that estimates robot position
+              to within 4&nbsp;cm on a 12&times;8&nbsp;meter field, using ArUco
+              tag detection integrated into ROS2.
+            </p>
             <div class="tags">
-              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">ROS2</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="card">
+          <!-- TODO: replace with /assets/img/ironrotor.jpg -->
+          <img src="/assets/img/placeholder.svg" alt="">
+          <div class="card-body">
+            <h3><a href="/projects/ironrotor.html">IronRotor</a></h3>
+            <p class="when">Game developer intern, 2026</p>
+            <p>
+              NPC navigation and a dynamic building destruction system for a
+              Unity game, built to stay at 60&nbsp;fps through heavy
+              simultaneous demolitions.
+            </p>
+            <div class="tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Gameplay</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Earlier work</h2>
+      <p class="meta">Where this started.</p>
+
+      <ul class="grid">
+        <li class="card">
+          <!-- TODO: replace with /assets/img/soccer.jpg -->
+          <img src="/assets/img/placeholder.svg" alt="">
+          <div class="card-body">
+            <h3><a href="/projects/soccer-game.html">2D Soccer Game</a></h3>
+            <p class="when">8th grade</p>
+            <p>
+              A <em>Head Soccer</em>&ndash;style game, and the first thing I
+              built in Unity. Playable in the browser.
+            </p>
+            <div class="tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
             </div>
           </div>
         </li>
@@ -58,8 +129,8 @@
   <footer class="site-footer">
     <p>
       &copy; <span id="year"></span> Jason Panoff &middot;
-      <!-- TODO: real links -->
-      <a href="https://github.com/JasonL337">GitHub</a>
+      <a href="https://github.com/JasonL337">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/jason-panoff">LinkedIn</a>
     </p>
   </footer>
 

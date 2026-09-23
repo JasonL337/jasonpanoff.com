@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IronRotor — Jason Panoff</title>
+  <meta name="description" content="NPC navigation and a dynamic building destruction system built in Unity for IronRotor.">
+  <link rel="canonical" href="https://jasonpanoff.com/projects/ironrotor.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Jason Panoff</a>
+    <nav>
+      <a href="/projects/">Projects</a>
+      <a href="/games/">Games</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <section class="hero">
+      <p class="when">Game developer intern &middot; Summer 2026</p>
+      <h1>IronRotor</h1>
+      <p class="tagline">
+        NPC navigation and a dynamic building destruction system in Unity,
+        built to hold 60&nbsp;fps through heavy simultaneous demolitions.
+      </p>
+      <p class="meta">Shared with permission from IronRotor.</p>
+    </section>
+
+    <h2>NPC navigation</h2>
+    <p>
+      Each active agent runs its own pathfinding and raycast-based obstacle
+      avoidance on a staggered interval, coordinated by a universal manager.
+      Staggering the updates keeps the per-frame cost flat as the number of
+      agents grows, rather than spiking whenever many agents replan at once.
+    </p>
+
+    <!-- TODO: replace TODO_NAV_VIDEO_ID with the YouTube id -->
+    <div class="video" data-youtube="TODO_NAV_VIDEO_ID" data-title="IronRotor NPC navigation"></div>
+    <p class="video-note">
+      Or <a href="https://www.youtube.com/watch?v=TODO_NAV_VIDEO_ID">watch on YouTube</a>.
+    </p>
+
+    <div class="gallery">
+      <!-- TODO: replace with real screenshots, e.g. /assets/img/ironrotor-nav-1.jpg -->
+      <img src="/assets/img/placeholder.svg" alt="NPC navigation in IronRotor">
+      <img src="/assets/img/placeholder.svg" alt="NPC navigation in IronRotor">
+    </div>
+
+    <h2>Building destruction</h2>
+    <p>
+      Buildings break apart using pre-fractured meshes, with object pooling to
+      avoid allocation spikes and LOD blending to keep distant debris cheap.
+      The goal was for several buildings coming down at once to cost about what
+      one does.
+    </p>
+
+    <!-- TODO: replace TODO_DESTRUCTION_VIDEO_ID with the YouTube id -->
+    <div class="video" data-youtube="TODO_DESTRUCTION_VIDEO_ID" data-title="IronRotor building destruction"></div>
+    <p class="video-note">
+      Or <a href="https://www.youtube.com/watch?v=TODO_DESTRUCTION_VIDEO_ID">watch on YouTube</a>.
+    </p>
+
+    <div class="gallery">
+      <!-- TODO: replace with real screenshots -->
+      <img src="/assets/img/placeholder.svg" alt="Building destruction in IronRotor">
+      <img src="/assets/img/placeholder.svg" alt="Building destruction in IronRotor">
+    </div>
+
+    <h2>Also</h2>
+    <p>
+      Particle systems, HUD effects, and animation for player vehicle impacts
+      and status effects.
+    </p>
+
+    <a class="back" href="/projects/">&larr; All projects</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Jason Panoff</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

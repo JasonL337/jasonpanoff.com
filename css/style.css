@@ -162,3 +162,86 @@ nav a:hover { color: var(--accent); }
 .prose a { color: var(--accent); }
 
 .back { display: inline-block; margin-top: 3rem; color: var(--muted); }
+
+/* ---- Split hero (two images side by side) ------------------------------ */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  margin: 1.5rem 0;
+}
+
+.split img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.split figure { margin: 0; }
+.split figcaption { margin-top: .4rem; font-size: .8rem; color: var(--muted); }
+
+@media (max-width: 34rem) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* ---- Buttons ----------------------------------------------------------- */
+
+.button {
+  display: inline-block;
+  padding: .6rem 1.1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover { filter: brightness(1.08); }
+
+.button-secondary {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.button-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0; }
+
+/* ---- Screenshot gallery ------------------------------------------------ */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: .75rem;
+  margin: 1.25rem 0;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--border);
+}
+
+/* ---- Small meta text --------------------------------------------------- */
+
+.meta { font-size: .85rem; color: var(--muted); }
+.when { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+.links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+.links a { color: var(--accent); }
+
+/* Placeholder state for a video whose id has not been filled in yet. */
+.video-todo {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--muted);
+  font-size: .9rem;
+  background: var(--border);
+}

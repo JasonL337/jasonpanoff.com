@@ -16,6 +16,16 @@ document.querySelectorAll('.video[data-youtube]').forEach(function (box) {
   var id = box.dataset.youtube;
   var title = box.dataset.title || 'Video';
 
+  // Placeholder until a real id is filled in, so unfinished pages do not
+  // render a broken YouTube thumbnail.
+  if (!id || id.indexOf('TODO') === 0) {
+    var note = document.createElement('div');
+    note.className = 'video-todo';
+    note.textContent = 'Video coming soon';
+    box.appendChild(note);
+    return;
+  }
+
   var poster = document.createElement('button');
   poster.className = 'video-poster';
   poster.type = 'button';

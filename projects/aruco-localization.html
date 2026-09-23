@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArUco Robot Localization — Jason Panoff</title>
+  <meta name="description" content="A camera-based localization system estimating robot position within 4cm on a 12x8 meter field.">
+  <link rel="canonical" href="https://jasonpanoff.com/projects/aruco-localization.html">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Jason Panoff</a>
+    <nav>
+      <a href="/projects/">Projects</a>
+      <a href="/games/">Games</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <section class="hero">
+      <p class="when">IEEE RAS UT RoboMaster</p>
+      <h1>ArUco Robot Localization</h1>
+      <p class="tagline">
+        A camera-based localization system in C++ that estimates robot position
+        to within 4&nbsp;cm on a 12&times;8&nbsp;meter playing field.
+      </p>
+    </section>
+
+    <div class="split">
+      <figure>
+        <!-- TODO: replace with /assets/img/aruco-detection.jpg -->
+        <img src="/assets/img/placeholder.svg" alt="ArUco tag detection overlaid on a camera frame">
+        <figcaption>Tag detection on a camera frame.</figcaption>
+      </figure>
+      <figure>
+        <!-- TODO: replace with /assets/img/aruco-field.jpg -->
+        <img src="/assets/img/placeholder.svg" alt="The RoboMaster playing field">
+        <figcaption>The field the estimates are made against.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+      <!-- TODO: a paragraph in your own words. -->
+      TODO: what the problem was and why tag-based localization was the right
+      approach for it.
+    </p>
+
+    <h2>Demo</h2>
+
+    <!-- TODO: replace TODO_ARUCO_VIDEO_ID with the YouTube id -->
+    <div class="video" data-youtube="TODO_ARUCO_VIDEO_ID" data-title="ArUco localization demo"></div>
+    <p class="video-note">
+      Or <a href="https://www.youtube.com/watch?v=TODO_ARUCO_VIDEO_ID">watch on YouTube</a>.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      Built in C++ with OpenCV&rsquo;s ArUco detection, integrated into the
+      robot software stack with ROS2. Webcam data was captured and replayed with
+      <code>ros2 bag</code> so the pipeline could be tested without the robot,
+      and the whole environment ran in Docker to keep deployment consistent
+      across machines.
+    </p>
+    <p>
+      <!-- TODO: the interesting part. How did you get to 4cm? What was noisy? -->
+      TODO
+    </p>
+    <a class="back" href="/projects/">&larr; All projects</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Jason Panoff</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
