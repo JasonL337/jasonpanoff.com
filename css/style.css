@@ -58,3 +58,107 @@ nav a:hover { color: var(--accent); }
   color: var(--muted);
   font-size: .9rem;
 }
+
+/* ---- Project grid ------------------------------------------------------ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1.25rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color .15s, transform .15s;
+}
+
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--border);
+}
+
+.card-body { padding: 1rem 1.1rem 1.2rem; }
+.card-body h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
+.card-body h3 a { color: var(--fg); text-decoration: none; }
+.card:hover h3 a { color: var(--accent); }
+.card-body p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+.tags { margin-top: .75rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag {
+  font-size: .75rem;
+  padding: .15rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* ---- Click-to-load YouTube --------------------------------------------- */
+/* The iframe is only injected on click. Embedding it directly would pull
+   ~1MB of Google JS into every page load, before the visitor asks to watch. */
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.video-poster {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+.video-poster::after {
+  content: "";
+  width: 4.5rem;
+  height: 3.2rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .75);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: 0 0 0 99rem rgba(0, 0, 0, .15) inset;
+}
+
+.video-poster::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  border-width: .7rem 0 .7rem 1.15rem;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-poster:hover::after { background: #c00; }
+
+.video-note { margin: -.75rem 0 1.5rem; font-size: .9rem; color: var(--muted); }
+
+/* ---- Prose ------------------------------------------------------------- */
+
+.prose { max-width: 42rem; }
+.prose h2 { margin-top: 2.5rem; }
+.prose a { color: var(--accent); }
+
+.back { display: inline-block; margin-top: 3rem; color: var(--muted); }
