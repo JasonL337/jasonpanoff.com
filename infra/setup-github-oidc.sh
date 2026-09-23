@@ -13,7 +13,7 @@
 
 set -euo pipefail
 
-GITHUB_REPO="jasonl337/jasonpanoff.com"
+GITHUB_REPO="JasonL337/jasonpanoff.com"  # case-sensitive: must match GitHub exactly
 BRANCH="main"
 BUCKET="jasonpanoff-com-site"
 DISTRIBUTION_ID="E2OWGQLWY22666"
