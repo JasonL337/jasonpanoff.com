@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArUco Robot Localization — Jason Panoff</title>
-  <meta name="description" content="A camera-based localization system estimating robot position within 4cm on a 12x8 meter field.">
+  <meta name="description" content="A camera-based localization system estimating robot position within 4 cm on a 12x8 meter field.">
   <link rel="canonical" href="https://jasonpanoff.com/projects/aruco-localization.html">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -21,44 +21,33 @@
     <section class="hero">
       <p class="when">IEEE RAS UT RoboMaster</p>
       <h1>ArUco Robot Localization</h1>
-      <p class="tagline">
-        A camera-based localization system in C++ that estimates robot position
-        to within 4&nbsp;cm on a 12&times;8&nbsp;meter playing field.
-      </p>
     </section>
 
-    <div class="split">
-      <figure>
-        <!-- TODO: replace with /assets/img/aruco-detection.jpg -->
-        <img src="/assets/img/placeholder.svg" alt="ArUco tag detection overlaid on a camera frame">
-        <figcaption>Tag detection on a camera frame.</figcaption>
-      </figure>
-      <figure>
-        <!-- TODO: replace with /assets/img/aruco-field.jpg -->
-        <img src="/assets/img/placeholder.svg" alt="The RoboMaster playing field">
-        <figcaption>The field the estimates are made against.</figcaption>
-      </figure>
-    </div>
+    <div class="video" data-youtube="qVACLRt8jwY" data-title="ArUco localization demo"></div>
+    <p class="video-note">Or <a href="https://youtu.be/qVACLRt8jwY">watch on YouTube</a>.</p>
 
     <p>
-      <!-- TODO: a paragraph in your own words. -->
-      TODO: what the problem was and why tag-based localization was the right
-      approach for it.
+      A camera-based localization system in C++ that estimates the robot&rsquo;s position to
+      within 4&nbsp;cm on a 12&times;8&nbsp;meter playing field. It detects ArUco tags with
+      OpenCV and feeds the resulting estimates into the robot&rsquo;s ROS2 stack. Webcam runs
+      recorded with <code>ros2 bag</code> meant the pipeline could be replayed and tuned
+      without the robot, and the whole environment ran in Docker so it behaved the same on
+      every machine.
     </p>
 
-    <h2>Demo</h2>
-
-    <!-- TODO: replace TODO_ARUCO_VIDEO_ID with the YouTube id -->
-    <div class="video" data-youtube="TODO_ARUCO_VIDEO_ID" data-title="ArUco localization demo"></div>
-    <p class="video-note">
-      Or <a href="https://www.youtube.com/watch?v=TODO_ARUCO_VIDEO_ID">watch on YouTube</a>.
-    </p>
+    <div class="gallery">
+      <img src="/assets/img/localization/showcase.png" alt="A detected ArUco tag outlined in green with an X and Z position readout overlaid on the camera frame" loading="lazy">
+    </div>
 
     <a class="back" href="/projects/">&larr; All projects</a>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Jason Panoff</p>
+    <p>
+      &copy; <span id="year"></span> Jason Panoff &middot;
+      <a href="https://github.com/JasonL337">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/jason-panoff">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="/js/main.js"></script>

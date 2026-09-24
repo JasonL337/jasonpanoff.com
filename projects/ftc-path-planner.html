@@ -21,53 +21,32 @@
     <section class="hero">
       <p class="when">10th grade &middot; FIRST Tech Challenge, Team 6209</p>
       <h1>FTC Path Planner</h1>
-      <p class="tagline">
-        A virtual simulation and path-creation application for our FTC robot,
-        built in Unity, along with the path-following algorithm the robot runs.
-      </p>
     </section>
 
-    <div class="split">
-      <figure>
-        <!-- TODO: replace with /assets/img/ftc-app.jpg -->
-        <img src="/assets/img/placeholder.svg" alt="The path planner application, showing a drawn path on a virtual field">
-        <figcaption>The planner: draw a path on a virtual field.</figcaption>
-      </figure>
-      <figure>
-        <!-- TODO: replace with /assets/img/ftc-robot.jpg -->
-        <img src="/assets/img/placeholder.svg" alt="Our FTC competition robot on the field">
-        <figcaption>The robot running it on the real field.</figcaption>
-      </figure>
+    <div class="video" data-youtube="ZqVtLzTJDkI" data-title="FTC path planner and path following demo"></div>
+    <p class="video-note">Or <a href="https://youtu.be/ZqVtLzTJDkI">watch on YouTube</a>.</p>
+
+    <p>
+      A Unity simulation and path-creation app for our FTC robot, along with the path-following
+      algorithm that runs on the robot itself. In the video I draw a path, save it, push it to
+      the robot&rsquo;s memory, and run it &mdash; and the follower pulls the robot back onto
+      the path even after I nudge and drag it off course. Building a new autonomous route went
+      from editing coordinates by hand to drawing it and watching it go.
+    </p>
+
+    <div class="gallery">
+      <img src="/assets/img/path-following/showcase.png" alt="The path planner with a hand-drawn path on a virtual field, beside a photo of the team 6209 robot on the real field" loading="lazy">
     </div>
-
-    <p>
-      Creating and modifying autonomous paths used to mean editing coordinates
-      by hand. This app made it visual: draw a path, save it, push it to the
-      robot, and watch it run. New paths took seconds instead of a session, and
-      revising an old one stopped being something we avoided.
-    </p>
-
-    <h2>Demo</h2>
-
-    <!-- TODO: replace TODO_FTC_VIDEO_ID with the YouTube id, e.g. dQw4w9WgXcQ -->
-    <div class="video" data-youtube="TODO_FTC_VIDEO_ID" data-title="FTC Path Planner demo"></div>
-    <p class="video-note">
-      <!-- TODO: same id here -->
-      Or <a href="https://www.youtube.com/watch?v=TODO_FTC_VIDEO_ID">watch on YouTube</a>.
-    </p>
-
-    <p>
-      In this video I draw a path, save it, push it to the robot&rsquo;s memory,
-      and run the self-contained path-following algorithm. The algorithm
-      corrects the robot back onto the path even after it is nudged or pulled
-      off course &mdash; as I do to it here.
-    </p>
 
     <a class="back" href="/projects/">&larr; All projects</a>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Jason Panoff</p>
+    <p>
+      &copy; <span id="year"></span> Jason Panoff &middot;
+      <a href="https://github.com/JasonL337">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/jason-panoff">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="/js/main.js"></script>

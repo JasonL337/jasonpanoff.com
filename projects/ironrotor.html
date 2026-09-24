@@ -21,64 +21,57 @@
     <section class="hero">
       <p class="when">Game developer intern &middot; Summer 2026</p>
       <h1>IronRotor</h1>
-      <p class="tagline">
-        NPC navigation and a dynamic building destruction system in Unity,
-        built to hold 60&nbsp;fps through heavy simultaneous demolitions.
-      </p>
-      <p class="meta">Shared with permission from IronRotor.</p>
     </section>
 
-    <h2>NPC navigation</h2>
-    <p>
-      Each active agent runs its own pathfinding and raycast-based obstacle
-      avoidance on a staggered interval, coordinated by a universal manager.
-      Staggering the updates keeps the per-frame cost flat as the number of
-      agents grows, rather than spiking whenever many agents replan at once.
-    </p>
+    <h2>Navigation system</h2>
 
-    <!-- TODO: replace TODO_NAV_VIDEO_ID with the YouTube id -->
-    <div class="video" data-youtube="TODO_NAV_VIDEO_ID" data-title="IronRotor NPC navigation"></div>
-    <p class="video-note">
-      Or <a href="https://www.youtube.com/watch?v=TODO_NAV_VIDEO_ID">watch on YouTube</a>.
+    <div class="video" data-youtube="v91FvMG_sFw" data-title="IronRotor NPC navigation"></div>
+    <p class="video-note">Or <a href="https://youtu.be/v91FvMG_sFw">watch on YouTube</a>.</p>
+
+    <p>
+      Every active NPC runs its own pathfinding and raycast-based obstacle avoidance, on a
+      staggered interval handed out by a universal manager. Staggering is what keeps the
+      per-frame cost flat as the number of agents grows, instead of spiking whenever a crowd
+      of them decides to replan on the same frame.
     </p>
 
     <div class="gallery">
-      <!-- TODO: replace with real screenshots, e.g. /assets/img/ironrotor-nav-1.jpg -->
-      <img src="/assets/img/placeholder.svg" alt="NPC navigation in IronRotor">
-      <img src="/assets/img/placeholder.svg" alt="NPC navigation in IronRotor">
+      <img src="/assets/img/nav/showcase.png" alt="Avoidance rays fanning out from a patrol boat in the Unity scene view" loading="lazy">
+      <img src="/assets/img/nav/nav-3.png" alt="Navigation tuning parameters in the Unity inspector beside a boat in open water" loading="lazy">
+      <img src="/assets/img/nav/nav-1.png" alt="The navigation system running in the Unity editor" loading="lazy">
+      <img src="/assets/img/nav/nav-2.png" alt="The navigation system running in the Unity editor" loading="lazy">
+      <img src="/assets/img/nav/nav-4.png" alt="The navigation system running in the Unity editor" loading="lazy">
     </div>
 
-    <h2>Building destruction</h2>
-    <p>
-      Buildings break apart using pre-fractured meshes, with object pooling to
-      avoid allocation spikes and LOD blending to keep distant debris cheap.
-      The goal was for several buildings coming down at once to cost about what
-      one does.
-    </p>
+    <h2>Destruction system</h2>
 
-    <!-- TODO: replace TODO_DESTRUCTION_VIDEO_ID with the YouTube id -->
-    <div class="video" data-youtube="TODO_DESTRUCTION_VIDEO_ID" data-title="IronRotor building destruction"></div>
-    <p class="video-note">
-      Or <a href="https://www.youtube.com/watch?v=TODO_DESTRUCTION_VIDEO_ID">watch on YouTube</a>.
+    <div class="video" data-youtube="w-WWI6cs42I" data-title="IronRotor building destruction"></div>
+    <p class="video-note">Or <a href="https://youtu.be/w-WWI6cs42I">watch on YouTube</a>.</p>
+
+    <p>
+      Buildings come apart using pre-fractured meshes, with object pooling to avoid allocation
+      spikes and LOD blending to keep distant debris cheap. The target was for several buildings
+      collapsing at once to cost roughly what one does, so the frame rate holds at 60 during the
+      moments the game is most worth watching.
     </p>
 
     <div class="gallery">
-      <!-- TODO: replace with real screenshots -->
-      <img src="/assets/img/placeholder.svg" alt="Building destruction in IronRotor">
-      <img src="/assets/img/placeholder.svg" alt="Building destruction in IronRotor">
+      <img src="/assets/img/destruction/showcase.png" alt="A building fragmenting under fire from the player helicopter" loading="lazy">
+      <img src="/assets/img/destruction/destruction-1.png" alt="Building destruction in progress" loading="lazy">
+      <img src="/assets/img/destruction/destruction-2.png" alt="Building destruction in progress" loading="lazy">
     </div>
 
-    <h2>Also</h2>
-    <p>
-      Particle systems, HUD effects, and animation for player vehicle impacts
-      and status effects.
-    </p>
+    <p class="meta">Shared with permission from IronRotor.</p>
 
     <a class="back" href="/projects/">&larr; All projects</a>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Jason Panoff</p>
+    <p>
+      &copy; <span id="year"></span> Jason Panoff &middot;
+      <a href="https://github.com/JasonL337">GitHub</a> &middot;
+      <a href="https://linkedin.com/in/jason-panoff">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="/js/main.js"></script>

@@ -157,9 +157,18 @@ nav a:hover { color: var(--accent); }
 
 /* ---- Prose ------------------------------------------------------------- */
 
-.prose { max-width: 42rem; }
-.prose h2 { margin-top: 2.5rem; }
+/* Text stays in a readable column; media is free to use the full width. */
+.prose > p,
+.prose > ul,
+.prose > h2,
+.prose > .hero,
+.prose > .video-note,
+.prose > .back { max-width: 42rem; }
+
+.prose > h2 { margin-top: 3rem; }
 .prose a { color: var(--accent); }
+.prose > ul { padding-left: 1.2rem; }
+.prose > ul li { margin-bottom: .3rem; }
 
 .back { display: inline-block; margin-top: 3rem; color: var(--muted); }
 
